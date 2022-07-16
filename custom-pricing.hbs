@@ -32,35 +32,25 @@ into the {body} tag of the default.hbs template --}}
                 {{/if}}
             </figure>
         {{/if}}
+     <p>Your life is missing something...</p>
+
+<p>Sign up for our free newsletter and get the goodness right in your inbox.</p>
+
+<form class="form" data-members-form >
+  <label>Email <input type="email" required data-members-email />
+  </label>
+  <button>
+    <span class="loading">Loading...</span>
+    <span class="default">Sign Up</span>
+    <span class="success">Check Your Inbox!</span>
+    <span class="error">Error! Try again</span>
+  </button>
+</form>
 
     </header>
 
     <section class="gh-content gh-canvas">
         {{content}}
-        {{! Make sure you're in the post context}}
-  
-    {{! Only show the CTA if user is not a signed-in user }}
-    {{^if @member}}
-    
-    <p>What if you never had the chance to read <em>{{title}}</em> or my other articles about 
-    <a href={{primary_tag.url}}>{{primary_tag.name}}</a>
-    ?</p>
-    
-    <p>Avoid the possibility of your life getting much worse by    subscribing to my newsletter. It's totally free.</p>
-    
-    <form class="form" data-members-form>
-      <label>Email <input type="email" required data-members-email />
-      </label>
-      <button>
-        <span class="loading">Loading...</span>
-        <span class="default">Sign Up</span>
-        <span class="success">Check Your Inbox!</span>
-        <span class="error">Error! Try again</span>
-      </button>
-    </form>
-  
-  {{/if}}
-
     </section>
 
 </article>
