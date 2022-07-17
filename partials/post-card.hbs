@@ -37,6 +37,15 @@ which templates loop over to generate a list of posts. --}}
         {{/unless}} 
         --}}
 
+       {{!--  charrett free access --}}
+        {{#unless access}}
+        {{has visibility="public"}}
+        <div class="post-card-access">
+        Free Content
+        </div>
+        {{/has}}
+        {{/unless}} 
+
     </a>
     {{/if}}
 
