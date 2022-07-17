@@ -30,7 +30,9 @@ into the {body} of the default.hbs template --}}
                 {{/if}}
             {{/unless}}
             {{#if @site.description}}
-            <div class="site-description">{{@site.description}}</div>
+            <div>
+            <p> class="site-description">{{@site.description}}</p>
+            </div>
             <a class="footer-cta-button" href="#/portal" data-portal>
             <div class="footer-cta-input">Enter your email</div>
             <span>Sign up for free!</span>
