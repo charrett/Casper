@@ -29,12 +29,12 @@ into the {body} of the default.hbs template --}}
                     <h1 class="site-title">{{@site.title}}</h1>
                 {{/if}}
             {{/unless}}
-             <a class="footer-cta-button" href="#/portal" data-portal>
-                <div class="footer-cta-input">Enter your email</div>
-                <span>Sign up for free!</span>
-            </a>
             {{#if @site.description}}
-                <p class="site-description">{{@site.description}}</p>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+            <div class="footer-cta-input">Enter your email</div>
+            <span>Sign up for free!</span>
+            </a>
+            {{!--     <p class="site-description">{{@site.description}}</p> --}}
             {{/if}}
         </div>
     {{/match}}
