@@ -9,9 +9,8 @@ into the {body} tag of the default.hbs template --}}
 
 <main id="site-main" class="site-main">
 <article class="article {{post_class}}" style="padding-top: 0;">
-
-    <section class="gh-content gh-canvas">
-    {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
+    <section class="gh-head" class "gh-head outer">
+        {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
 {{#if @site.members_enabled}}
 {{#unless @member}}
 {{#if access}}
@@ -23,6 +22,7 @@ into the {body} tag of the default.hbs template --}}
 {{/if}}
 {{/unless}}
 {{/if}}
+    <section class="gh-content gh-canvas">
         {{content}}
     </section>
 
