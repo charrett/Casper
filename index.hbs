@@ -29,15 +29,12 @@ into the {body} of the default.hbs template --}}
                     <h1 class="site-title">{{@site.title}}</h1>
                 {{/if}}
             {{/unless}}
-            {{#if @site.description}}
-            <div>
-            <p class="site-description"> Home of Quality Coach Book. Sign up for a free trial</p>
-            </div>
             {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
             {{#if @site.members_enabled}}
             {{#unless @member}}
             {{#if access}}
                 <section class="footer-cta outer">
+                    <p class="site-description"> Home of Quality Coach Book. Sign up for a free trial</p>
                     <div class="inner">
                         <a class="footer-cta-button" href="https://www.annemariecharrett.com/intro4">
                             <div class="footer-cta-input">Enter your email</div>
@@ -54,7 +51,6 @@ into the {body} of the default.hbs template --}}
             <div class="footer-cta-input">Enter your email</div>
             <span>Try it!</span>
             </a> --}}
-            {{/if}}
         </div>
     {{/match}}
 
