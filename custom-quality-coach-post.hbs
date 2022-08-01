@@ -84,13 +84,16 @@ into the {body} tag of the default.hbs template --}}
 
     <section class="gh-content gh-canvas">
         {{content}} 
+         {{!-- Like button    --}}
+        <span id="cove-like-button"></span>
     </section>
 
 
     <section class="article-comments gh-canvas">
+
            {{!-- If you want to embed comments, this is a good place to paste your code!     --}}
-           {{> comments}}  
-           <span id="cove-like-button"></span>
+           {{!-- {{> comments}}  remove comments  --}} 
+
 
     </section>
 
