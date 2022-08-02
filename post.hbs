@@ -86,15 +86,19 @@ into the {body} tag of the default.hbs template --}}
         {{content}} 
          {{!-- Like button    --}}
         <span id="cove-like-button"></span>
-        <script>
-        const Cove = {
-        contentId: "{{id}}",
-        memberId: "{{@member.uuid}}",
-        memberEmail: "{{@member.email}}",
-        memberName: "{{@member.firstname}}"
-        }
-        </script>
-    </section>
+        {{#if @member}}
+          <script>
+          const Cove = {
+            contentId: "{{id}}",
+            memberId: "{{@member.uuid}}",
+            memberEmail: "{{@member.email}}", 
+            memberName: "{{@member.firstname}}"
+          }
+          </script> 
+        {{else}}
+          <p><a href="#/portal/signup">Sign in or become a {{@site.title}} member</a> to like this post.<br>
+        {{/if}}  
+        </section>
 
     {{!--
     <section class="article-comments gh-canvas">
