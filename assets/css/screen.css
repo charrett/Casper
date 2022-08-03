@@ -1636,6 +1636,13 @@ iframe.instagram-media + script + :not([id]) {
     height: 16px;
 }
 
+@media (min-width: 1001px) {
+    .author-template .post-card-large .post-card-content {
+        grid-column: span 2;
+        max-width: 640px;
+    }
+}
+
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
@@ -1649,6 +1656,12 @@ iframe.instagram-media + script + :not([id]) {
     order: 1;
 }
 
+@media (min-width: 1001px) {
+    .tag-template .post-card-large .post-card-content {
+        grid-column: span 2;
+        max-width: 640px;
+    }
+}
 
 /* 9. Error Template
 /* ---------------------------------------------------------- */
@@ -1857,6 +1870,14 @@ html.dark-mode .post-card-excerpt {
     color: var(--color-secondary-text);
 }
 
+html.dark-mode .author-profile-location {
+    color: #fff;
+}
+
+html.dark-mode .author-profile-social-link:hover {
+    color: #fff;
+}
+
 html.dark-mode .article-title {
     color: #fff;
 }
@@ -2028,7 +2049,15 @@ html.dark-mode .footer-cta-title {
     html.auto-color .post-card-excerpt {
         color: var(--color-secondary-text);
     }
-    
+
+    html.auto-color .author-profile-location {
+        color: #fff;
+    }
+
+    html.auto-color .author-profile-social-link:hover {
+        color: #fff;
+    }
+
     html.auto-color .article-title {
         color: #fff;
     }
