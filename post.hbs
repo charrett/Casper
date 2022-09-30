@@ -83,22 +83,8 @@ into the {body} tag of the default.hbs template --}}
     </header>
 
     <section class="gh-content gh-canvas">
-        {{content}} 
-         {{!-- Like button    --}}
-         <span id="cove-like-button"></span>
-        {{#if @member}}
-          <script>
-          const Cove = {
-            contentId: "{{id}}",
-            memberId: "{{@member.uuid}}",
-            memberEmail: "{{@member.email}}", 
-            memberName: "{{@member.firstname}}"
-          }
-          </script> 
-        {{else}}
-          <p><a href="#/portal/signup">Sign in or become a {{@site.title}} member</a> to like this post.<br>
-        {{/if}}  
-        </section>
+        {{content}}
+    </section>
 
     {{#if comments}}
         <section class="article-comments gh-canvas">
@@ -152,14 +138,3 @@ into the {body} tag of the default.hbs template --}}
 {{/if}}
 
 {{/post}}
-
-{{!-- Amplitude Logging --}}
-{{#if @member}}
-<script type="text/javascript">
-    amplitude.getInstance().logEvent('Viewed post as Member');
-</script>
-{{else}}
-<script type="text/javascript">
-    amplitude.getInstance().logEvent('Viewed post as Guest');
-</script>
-{{/if}}
