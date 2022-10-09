@@ -87,9 +87,9 @@ into the {body} tag of the default.hbs template --}}
     </section>
 
 
-    <section class="article-comments gh-canvas">
-
-           {{!-- If you want to embed comments, this is a good place to paste your code!     --}}
+</article>
+</main>
+  <section class="article-comments gh-canvas">
             {{#if comments}}
             <section class="article-comments gh-canvas">
             {{comments}}
@@ -98,11 +98,7 @@ into the {body} tag of the default.hbs template --}}
 
 
     </section>
-
-
-</article>
-</main>
-
+    
 {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
 {{#if @site.members_enabled}}
 {{#unless @member}}
