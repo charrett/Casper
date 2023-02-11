@@ -123,14 +123,3 @@ into the {body} tag of the default.hbs template --}}
 {{/if}}
 
 {{/post}}
-
-{{!-- Amplitude Logging --}}
-{{#if @member}}
-<script type="text/javascript">
-    amplitude.getInstance().logEvent('Viewed post as Member');
-</script>
-{{else}}
-<script type="text/javascript">
-    amplitude.getInstance().logEvent('Viewed post as Guest');
-</script>
-{{/if}}
