@@ -53,6 +53,34 @@
             {{> "post-card"}}
         {{/foreach}} 
 
+        {{#get "tags" limit="all"}}
+    <div class="topic-feed">
+
+        {{#foreach tags}}
+            <section class="topic">
+                <header class="topic-header">
+                    <h2 class="topic-name">
+                        <a href="{{url}}">{{name}}</a>
+                    </h2>
+                </header>
+                {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5"}}
+                    <ul class="topic-article-feed">
+                        <li class="topic-article">
+                            <h3 class="topic-article-title">
+                                <a class="topic-article-link" href="{{url}}">
+                                    {{> "icons/chevron-right"}} {{title}}
+                                </a>
+                            </h3>
+                        </li>
+                    </ul>
+                {{/get}}
+                <a class="topic-more" href="{{url}}">Show more →</a>
+            </section>
+        {{/foreach}}
+
+    </div>
+    {{/get}}
+
     
     </div>
     {{pagination}}
