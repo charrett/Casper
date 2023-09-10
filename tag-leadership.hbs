@@ -3,8 +3,6 @@
 
 <main id="site-main" class="site-main outer">
 <div class="inner posts">
-    
-    {{!-- original below --}}
     <div class="post-feed"></div>
     {{!-- <div class="post-card"{{#match @custom.feed_layout "List"}}{{/match}}</div>--}}
         {{#tag}}
@@ -56,8 +54,3 @@
     
 </div>
 </main>
-
-{{!-- {{#contentFor "body_class"}}{{#match @custom.feed_layout "Classic"}}{{/match}}{{/contentFor}}--}}
-{{!-- {{#contentFor "body_class"}}{{#match @custom.feed_layout "List"}}{{/contentFor}}  --}}
-{{!-- <article class="post-card {{post_class}}{{#match @custom.feed_layout "Classic"}}  --}}
-{{!-- {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}} --}}
