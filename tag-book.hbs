@@ -40,7 +40,7 @@
                 </div>
                <div> 
                <p>
-                                {{!-- Add FAQ Link --}}
+                {{!-- Add FAQ Link --}}
                 <h4 class="author-name"><a href="/faq/">Quality Coach FAQ</a></h4
                 <br></br>
                 {{!-- charrett added button for premium subscription --}}
@@ -55,8 +55,8 @@
         </section>
         {{/tag}}
 
-
-        {{#foreach posts}}
+        {{#get "tags" filter="slug:[ws, structure, role, quality-engineering]"}}
+        {{#foreach tags}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
         {{/foreach}}
